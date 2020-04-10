@@ -1,5 +1,5 @@
 {
-  "name": "vue-read-more",
+  "name": "@raublekick/vue-read-more",
   "version": "1.0.0",
   "description": "A flexible read-more component for VueJS",
   "main": "dist/vue-read-more.ssr.js",
