@@ -6,10 +6,12 @@ Read-More is a simple plugin fo vue.js forked from https://github.com/orlyyani/r
 
 I have removed the directive for simplicity.
 
-# NPM
+# Github NPM package
+
+__NOTE:__ This pacakge is hosted on GitHub.
 
 ```
- npm install @raublekick/vue-read-more --save
+ npm install raublekick/read-more --save
 ```
 
 # Features!
