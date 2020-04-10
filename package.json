@@ -1,22 +1,25 @@
 {
   "name": "vue-read-more",
-  "version": "1.1.0",
-  "description": "a vue.js read-more plugin",
-  "main": "dist/index.js",
-  "scripts": {
-    "build:base": "cross-env NODE_ENV=production webpack --config webpack.config.js --progress --hide-modules",
-    "build:ssr": "cross-env NODE_ENV=production webpack --config webpack.config.ssr.js --progress --hide-modules",
-    "build": "npm run build:base && npm run build:ssr"
-  },
+  "version": "1.0.0",
+  "description": "A flexible read-more component for VueJS",
+  "main": "dist/vue-read-more.ssr.js",
+  "browser": "dist/vue-read-more.esm.js",
+  "module": "dist/vue-read-more.esm.js",
+  "unpkg": "dist/vue-read-more.min.js",
+  "files": [
+    "dist/*",
+    "src/**/*.vue",
+    "!src/serve-dev.*"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/orlyyani/read-more.git"
+    "url": "git+https://github.com/raublekick/read-more.git"
   },
-  "author": "orlyjohnyanson@gmail.com",
+  "author": "raublekick@gmail.com",
   "license": "MIT",
-  "homepage": "https://github.com/orlyyani/read-more.git",
+  "homepage": "https://github.com/raublekick/read-more.git",
   "bugs": {
-    "url": "https://github.com/orlyyani/read-more/issues"
+    "url": "https://github.com/raublekick/read-more/issues"
   },
   "keywords": [
     "read",
@@ -28,11 +31,35 @@
     "vue.js",
     "vue"
   ],
-  "devDependencies": {
-    "@vue/component-compiler-utils": "^1.0.0"
+  "scripts": {
+    "serve": "vue-cli-service serve src/serve-dev.js",
+    "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
+    "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
+    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
-  "dependencies": {
-    "cross-env": "^5.1.4",
-    "webpack-merge": "^4.1.2"
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@rollup/plugin-alias": "^2.2.0",
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-replace": "^2.2.1",
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "cross-env": "^6.0.3",
+    "minimist": "^1.2.0",
+    "rollup": "^1.27.13",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-terser": "^5.1.3",
+    "rollup-plugin-vue": "^5.1.5",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.10"
+  },
+  "engines": {
+    "node": ">=8"
   }
 }
