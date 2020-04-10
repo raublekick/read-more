@@ -1,8 +1,8 @@
 # Vue.js Read-More
 
-[![npm version](https://github.com/raublekick/read-more)](https://github.com/raublekick/read-more)
+https://github.com/raublekick/read-more
 
-Read-More is a simple plugin fo vue.js forked from (https://github.com/orlyyani/read-more)
+Read-More is a simple plugin fo vue.js forked from https://github.com/orlyyani/read-more
 
 I have removed the directive for simplicity.
 
