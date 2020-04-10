@@ -28,7 +28,7 @@ __NOTE:__ This pacakge is hosted on GitHub.
 # Usage
 
 ```
- import ReadMore from 'vue-read-more';
+ import ReadMore from 'raublekick/vue-read-more';
  
  Vue.use(ReadMore);
 ```
